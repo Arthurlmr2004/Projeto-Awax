@@ -1001,6 +1001,10 @@ input[type="email"] {
         margin-left: 10px;
     }
 
+    .sectionSocialMedias .sectionSocialMediasImg {
+        gap: 40px;
+    }
+
     .sectionMap {
         padding: 0;
         padding-bottom: 250px;
