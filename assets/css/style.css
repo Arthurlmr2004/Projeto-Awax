@@ -1,0 +1,1230 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    overflow-x: hidden;
+}
+
+header {
+    height: 100px;
+    background-color: #000;
+    color: #FFF;
+}
+
+.container {
+    max-width: 1140px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+}
+
+.menuOpener {
+    display: none;
+}
+
+.menu {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.menu li a {
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    border-bottom: 5px solid #000;
+    height: 100px;
+}
+
+.menu li a:hover,
+.menu .active a {
+    border-bottom: 5px solid #B28756;
+    color: #CCC;
+}
+
+.button {
+    display: inline-block;
+    background-color: #B28756;
+    color: #FFF;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 10px 30px;
+    margin-top: 30px;
+    border-radius: 20px;
+}
+
+
+/*Área main*/
+.banner {
+    height: calc(100vh - 100px);
+    background-color: #333;
+    background-image: url('../Images/bg.jpg');
+    background-size: cover;
+    background-position: bottom;
+    overflow: hidden;
+}
+
+.banner .sliders {
+    width: 1000vw;
+    height: 100%;
+}
+
+.banner .slide {
+    display: inline-block;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.banner .slideArea {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+}
+
+.banner h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+}
+
+.banner h1 span {
+    color: #B28756;
+}
+
+.banner h2 {
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.banner .slidersPointers {
+    width: 100vw;
+    height: 20px;
+    position: absolute;
+    margin-top: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.banner .pointer {
+    width: 15px;
+    height: 15px;
+    border: 2px solid #B28756;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.banner .pointer.active {
+    background-color: #B28756;
+}
+
+.default {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.default .sectionTitle,
+.default .sectionDescription {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.default .sectionTitle {
+    font-size: 20px;
+}
+
+.default .sectionDescription {
+    font-size: 12px;
+    color: #CCC;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.default .sectionBody {
+    margin: auto;
+    max-width: 1140px;
+}
+
+.default.light {
+    background-color: #F7F7F7;
+}
+
+.default.light .sectionTitle,
+.default.light .sectionBody {
+    color: #000;
+}
+
+.default.dark {
+    background-color: #000;
+}
+
+.default.dark .sectionTitle,
+.default.dark .sectionBody {
+    color: #FFF;
+}
+
+
+
+
+/*  Css de Áreas específicas*/
+
+.sectionAboutUs {
+    display: flex;
+}
+
+.sectionAboutUsLeft {
+    flex: 1;
+}
+
+.sectionAboutUsLeft p {
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.sectionAboutUsRight {
+    width: 520px;
+    text-align: center;
+}
+
+.sectionAboutUsRight img {
+    width: 480px;
+    box-shadow: 0 5px 10px #333;
+}
+
+
+
+
+.sectionServices {
+    display: flex;
+}
+
+.sectionContent {
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid #333;
+    padding: 15px;
+}
+
+.sectionContent:first-child {
+    border-left: 1px solid #333;
+}
+
+.sectionContent h4 {
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.sectionContent p {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #999;
+}
+
+
+
+
+
+.sectionProjects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sectionProjectsFilters {
+    border: 1px solid #999;
+    background-color: #EEE;
+    border-radius: 30px;
+    padding: 0 20px;
+    display: inline-block;
+}
+
+.sectionProjectsFilters ul {
+    list-style-type: none;
+}
+
+.sectionProjectsFilters li {
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 10px;
+    font-size: 13px;
+    border-left: 1px solid #CCC;
+    color: #555;
+    border-bottom: 3px solid #EEE;
+    cursor: pointer;
+}
+
+.sectionProjectsFilters li:hover,
+.sectionProjectsFilters li.active {
+    border-bottom: 3px solid #B28756;
+}
+
+.sectionProjectsFilters li:first-child {
+    border-left: 0;
+}
+
+.sectionProjectsPhotos {
+    width: 100vw;
+    max-width: 1140px;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sectionPhotos {
+    width: 280px;
+}
+
+.sectionPhotoArea {
+    margin: 10px;
+    width: 260px;
+    height: 160px;
+}
+
+.sectionPhotoArea img {
+    width: inherit;
+    height: inherit;
+}
+
+.sectionPhotoInfo {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: inherit;
+    height: inherit;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    flex-direction: column;
+}
+
+.sectionPhotoInfo h5 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.sectionPhotoArea:hover .sectionPhotoInfo {
+    display: flex;
+    cursor: pointer;
+}
+
+
+.backgroundTeam {
+    background-image: url('../Images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 0;
+}
+
+.sectionTeamArea {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.sectionTeam {
+    overflow: hidden;
+    max-width: 880px;
+    margin: auto;
+}
+
+.sectionTeam .sliders {
+    width: 1000vw;
+    height: 100%;
+}
+
+.sectionTeam .slide {
+    display: inline-block;
+    width: 280px;
+    height: 100%;
+    min-height: 300px;
+    background-color: #FFF;
+    margin-right: 20px;
+}
+
+.sectionTeam .slideArea {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    padding: 30px;
+}
+
+.sectionTeamArea .slidersPointers {
+    margin-top: 30px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.sectionTeamArea .pointer {
+    width: 15px;
+    height: 15px;
+    border: 2px solid #B28756;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.sectionTeamArea .pointer.active {
+    background-color: #B28756;
+}
+
+.sectionTeamAvatar {
+    width: 150px;
+    height: auto;
+}
+
+.sectionTeamName {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 17px;
+    margin-top: 30px;
+}
+
+.sectionTeamRole {
+    font-size: 14px;
+    color: #999;
+    margin-top: 5px;
+}
+
+.sectionTeamSocial {
+    display: flex;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.sectionTeamSocial a {
+    display: inline-flex;
+    width: 25px;
+    height: 25px;
+    background-color: #CCC;
+    justify-content: center;
+    align-items: center;
+    border-radius: 13px;
+}
+
+.sectionTeamSocial a:hover {
+    background-color: #B28756;
+}
+
+.sectionHappyClients {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-width: 880px;
+    margin: auto;
+}
+
+.sectionHappyClients .sectionHappyClientsName {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.sectionHappyClients .imgQuote {
+    margin-top: 10px;
+}
+
+.sectionHappyClients .sectionHappyClientsRole {
+    font-size: 13px;
+}
+
+.sectionHappyClients .sectionHappyClientsDescription {
+    text-align: center;
+    color: #999;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.sectionHappyClients .slidersPointers {
+    margin-top: 30px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.sectionHappyClients .pointer {
+    width: 15px;
+    height: 15px;
+    border: 2px solid #B28756;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.sectionHappyClients .pointer.active {
+    background-color: #B28756;
+}
+
+.sectionBrands {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.sectionBrands .sectionBrandsImg {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.sectionPrice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    max-width: 1140px;
+}
+
+.sectionPrice .sectionPriceCard1 {
+    text-align: center;
+    width: 310px;
+    height: 330px;
+    background-color: #FFF;
+    border-radius: 10px;
+}
+
+.sectionPriceCard1 .sectionPriceFlat {
+    margin-top: 16px;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.sectionPriceCard1 .sectionPriceCost {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.sectionPriceCard1 .sectionPriceMonth {
+    color: #999;
+    font-size: 11px;
+    margin-bottom: 13px;
+    text-transform: uppercase;
+}
+
+.sectionPriceDescription p {
+    line-height: 30px;
+    position: relative;
+    color: #999;
+}
+
+.sectionPriceDescription p:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 10px;
+    height: 1px;
+    background-color: #000;
+    transform: translateX(-50%);
+}
+
+.sectionPrice .sectionPriceCard2 {
+    text-align: center;
+    width: 310px;
+    height: 330px;
+    background-color: #FFF;
+    border-radius: 10px;
+}
+
+.sectionPriceCard2 .sectionPriceFlat {
+    margin-top: 16px;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.sectionPriceCard2 .sectionPriceCost {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.sectionPriceCard2 .sectionPriceMonth {
+    color: #999;
+    font-size: 11px;
+    margin-bottom: 13px;
+    text-transform: uppercase;
+}
+
+.sectionPrice .sectionPriceCard3 {
+    text-align: center;
+    width: 310px;
+    height: 330px;
+    background-color: #FFF;
+    border-radius: 10px;
+}
+
+.sectionPriceCard3 .sectionPriceFlat {
+    margin-top: 16px;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.sectionPriceCard3 .sectionPriceCost {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.sectionPriceCard3 .sectionPriceMonth {
+    color: #999;
+    font-size: 11px;
+    margin-bottom: 13px;
+    text-transform: uppercase;
+}
+
+.sectionPrice .sectionPriceCard4 {
+    text-align: center;
+    width: 310px;
+    height: 330px;
+    background-color: #FFF;
+    border-radius: 10px;
+}
+
+.sectionPriceCard4 .sectionPriceFlat {
+    margin-top: 16px;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.sectionPriceCard4 .sectionPriceCost {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.sectionPriceCard4 .sectionPriceMonth {
+    color: #999;
+    font-size: 11px;
+    margin-bottom: 13px;
+    text-transform: uppercase;
+}
+
+.price {
+    margin-top: 15px;
+    padding: 13px 40px;
+    background-color: #555;
+}
+
+.price:hover {
+    background-color: #B28756;
+}
+
+.sectionPremiumBooks {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.sectionPremiumBooksDescriptionFather {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sectionPremiumBooksDescription {
+    display: flex;
+    gap: 25px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.sectionBooksDescription3 {
+    margin-bottom: 40px;
+}
+
+.sectionPremiumBooks {
+    border-bottom: 1px solid #CCC;
+}
+
+.sectionBody .slidersPointers {
+    margin-top: 30px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.sectionBody .pointer {
+    width: 15px;
+    height: 15px;
+    border: 2px solid #B28756;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.sectionBody .pointer.active {
+    background-color: #B28756;
+}
+
+.booksPremium {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.sectionFacts {
+    display: flex;
+}
+
+.sectionContentFacts {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sectionContentFacts h1 {
+    position: relative;
+    font-size: 50px;
+    color: #B28756;
+}
+
+.sectionContentFacts h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 10px;
+    height: 1px;
+    background-color: #CCC;
+    transform: translateX(-50%);
+    margin-bottom: -8px;
+}
+
+.sectionContentFacts h4 {
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.sectionContentFacts p {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #999;
+}
+
+.sectionSocialMedias {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.sectionSocialMedias .sectionSocialMediasImg {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.sectionSocialMediasIconShare h2,
+.sectionSocialMediasIcon h3 {
+    display: flex;
+    gap: 10px;
+    color: #999;
+    text-transform: uppercase;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.sectionContactUs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sectionContactUs .sectionContactUsInputFirst {
+    display: flex;
+    gap: 20px;
+}
+
+.sectionContactUs input[type="text"],
+input[type="email"] {
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border: 0;
+    outline: none;
+    border-bottom: 1px solid #999;
+    margin-bottom: 40px;
+}
+
+.sectionContactUsSubject {
+    margin-bottom: 20px;
+}
+
+.sectionContactUs a {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+}
+
+.sectionMap {
+    background-image: url('../Images/mapa.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 30px 0;
+}
+
+.sectionMapArea {
+    width: 100vw;
+    max-width: 1140px;
+    margin: auto;
+}
+
+.sectionMapInfo {
+    width: 50%;
+    padding: 30px;
+    background-color: #FFF;
+    color: #000;
+}
+
+.sectionMapInfoItem {
+    display: flex;
+    align-items: center;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.sectionMapInfoItemImg {
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background-color: #999;
+    border-radius: 15px;
+    margin-right: 15px;
+}
+
+.sectionMapInfoItemImg img {
+    width: 15px;
+    height: auto;
+}
+
+.sectionFooter {
+    display: flex;
+    width: 100vw;
+    max-width: 1140px;
+    gap: 100px;
+}
+
+.sectionSocialMediasFooter {
+    display: flex;
+    gap: 10px;
+}
+
+.sectionFooterImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.sectionFooterImg:hover {
+    background-color: #B28756;
+}
+
+.sectionFormFooter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 150px;
+    padding: 0 80px;
+    background-color: #333;
+}
+
+.sectionDescriptionFooter {
+    color: #555;
+}
+
+.sectionFooterInputLink {
+    display: flex;
+    flex-direction: column;
+}
+
+.sectionFooterInputLink a {
+    text-align: center;
+}
+
+.sectionFooterInputLink input[type="text"] {
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #999;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    color: #FFF;
+}
+
+.sectionFooterInputLink ::placeholder {
+    font-size: 12px;
+}
+
+
+
+@media (min-width:450px) and (max-width: 820px) {
+
+    .menuOpener {
+        display: block;
+        width: 40px;
+        margin-right: 30px;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 70vw;
+        height: calc(100vh - 100px);
+        top: 100px;
+        right: 0;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu li a {
+        margin-left: 50px;
+        height: 80px;
+        font-size: 20px;
+        font-weight: bold;
+        border: none;
+    }
+
+    .menu.active nav {
+        display: block;
+    }
+
+    .menu li.active a {
+        border: none;
+        color: #B28756;
+    }
+
+    .sectionAboutUs {
+        flex-direction: column;
+    }
+
+    .sectionAboutUsLeft {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-bottom: 30px;
+    }
+
+    .sectionAboutUsRight {
+        width: auto;
+    }
+
+    .sectionServices {
+        flex-wrap: wrap;
+    }
+
+    .sectionContent {
+        min-width: 50%;
+        margin-bottom: 30px;
+    }
+
+    .sectionContent:first-child {
+        border-left: none;
+    }
+
+    .sectionTeam {
+        max-width: 580px;
+    }
+
+    .sectionHappyClients .sectionHappyClientsDescription {
+        font-size: 16px;
+    }
+
+    .sectionBooks img {
+        width: 300px;
+    }
+
+    .sectionBooks {
+        margin-left: 10px;
+    }
+
+    .sectionSocialMedias .sectionSocialMediasImg {
+        gap: 40px;
+    }
+
+    .sectionMap {
+        padding: 0;
+        padding-bottom: 250px;
+    }
+
+    .sectionMapArea {
+        width: auto;
+    }
+
+    .sectionMapInfoItem {
+        margin-bottom: 20px;
+    }
+
+    .sectionMapInfo {
+        width: auto;
+    }
+
+    .sectionMapInfoItem:last-child {
+        margin-bottom: 0;
+    }
+
+    .sectionFooter {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .sectionDescriptionFooter {
+        font-size: 12.8px;
+        margin-left: 10px;
+    }
+
+    .sectionFormFooter {
+        width: auto;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .menuOpener {
+        display: block;
+        width: 40px;
+        margin-right: 30px;
+        cursor: pointer;
+    }
+
+    nav {
+        display: none; 
+        position: absolute;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 80vw;
+        height: calc(100vh - 100px);
+        top: 100px;
+        right: 0;
+    }
+
+    .menu.active nav {
+        display: block; 
+    }
+
+    .menu ul {
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu li a {
+        margin-left: 30px;
+        height: 55px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #fff; 
+        text-decoration: none;
+    }
+
+    .menu li.active a {
+        border-bottom: none;
+        color: #B28756;
+    }
+
+    .banner h1 {
+        font-size: 30px;
+    }
+
+    .banner h2 {
+        font-size: 17px;
+    }
+
+    .sectionAboutUs {
+        flex-direction: column;
+    }
+
+    .sectionAboutUsLeft {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-bottom: 30px;
+    }
+
+    .sectionAboutUsRight {
+        width: auto;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .sectionAboutUsRight img {
+        width: 100%;
+    }
+
+    .sectionServices {
+        flex-wrap: wrap;
+    }
+
+    .sectionContent {
+        min-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .sectionContent:first-child {
+        border-left: none;
+    }
+
+    .sectionProjectsFilters {
+        width: 80vw;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .sectionHappyClients .sectionHappyClientsDescription {
+        font-size: 16px;
+    }
+
+    .sectionTeam {
+        max-width: 280px;
+    }
+
+    .sectionPrice {
+        flex-direction: column;
+    }
+
+    .sectionBooks img {
+        width: 280px;
+    }
+
+    .sectionBooks {
+        margin: auto;
+        margin-left: 70px;
+    }
+
+    .sectionPremiumBooks {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sectionPremiumBooksDescriptionFather {
+        margin-left: 30px;
+    }
+
+    .sectionPremiumBooksDescription {
+        font-size: 14px;
+    }
+
+    .sectionFacts {
+        flex-direction: column;
+        gap: 70px;
+    }
+
+    .sectionSocialMediasImg {
+        flex-direction: column;
+    }
+
+    .linkedin h3 {
+        margin-right: 11px;
+    }
+
+    .sectionMap {
+        padding: 0;
+        padding-bottom: 250px;
+    }
+
+    .sectionMapArea {
+        width: auto;
+    }
+
+    .sectionMapInfoItem {
+        margin-bottom: 20px;
+    }
+
+    .sectionMapInfo {
+        width: auto;
+    }
+
+    .sectionMapInfoItem:last-child {
+        margin-bottom: 0;
+    }
+
+    .sectionFooter {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .sectionDescriptionFooter {
+        font-size: 11px;
+        margin-left: 5px;
+    }
+
+    .sectionFormFooter {
+        width: auto;
+    }
+}
